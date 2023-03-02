@@ -1,0 +1,844 @@
+.loading {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    margin: 150px auto;
+    background-color: transparent;
+    animation: spin 2s linear infinite;
+    animation-direction: reverse;
+
+}
+
+.shape {
+    display: block;
+    position: absolute;
+    height: 20px;
+    width: 40px;
+    background-color: rgb(0, 0, 0);
+    mix-blend-mode: exclusion;
+    -webkit-backface-visibility: visible;
+
+}
+
+.shape.shape-1 {
+    animation: spin1 2s ease-in-out infinite;
+    animation-fill-mode: forwards;
+
+}
+
+.shape.shape-2 {
+    animation: spin2 2s ease-in-out infinite;
+    animation-fill-mode: forwards;
+
+}
+
+.shape.shape-3 {
+    animation: spin3 2s ease-in-out infinite;
+    animation-fill-mode: forwards;
+
+}
+
+.shape.shape-4 {
+    animation: spin4 2s ease-in-out infinite;
+    animation-fill-mode: forwards;
+
+}
+
+.shape.shape-1 {
+    top: 20px;
+    left: 40px;
+
+}
+
+.shape.shape-2 {
+    right: 20px;
+    top: 40px;
+    width: 20px;
+    height: 40px;
+
+}
+
+.shape.shape-3 {
+    bottom: 20px;
+    left: 40px;
+
+}
+
+.shape.shape-4 {
+    left: 20px;
+    top: 40px;
+    width: 20px;
+    height: 40px;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(90deg);
+    }
+
+
+}
+
+@keyframes spin1 {
+    25% {
+        transform: rotate(90deg) translate(30px, -10px) scale(1)
+    }
+
+    100% {
+        transform: rotate(90deg) translate(30px, -10px) scale(2)
+    }
+}
+
+@keyframes spin2 {
+    15% {
+        transform: rotate(0deg) translate(0px) scaleY(1);
+
+    }
+
+    50% {
+        transform: rotate(90deg) translate(10px, 30px) scaleY(1)
+    }
+
+    100% {
+        transform: rotate(90deg) translate(10px, 30px) scaleY(2)
+    }
+}
+
+@keyframes spin3 {
+    40% {
+        transform: rotate(0deg) translate(0px) scaleX(1);
+
+    }
+
+    75% {
+        transform: rotate(90deg) translate(-30px, 10px) scaleX(1)
+    }
+
+    100% {
+        transform: rotate(90deg) translate(-30px, 10px) scaleX(2)
+    }
+}
+
+@keyframes spin4 {
+    65% {
+        transform: rotate(0deg) translate(0px) scaleY(1);
+
+    }
+
+    100% {
+        transform: rotate(90deg) translate(-10px, 30px) scaleY(1)
+    }
+
+}
+
+.container {
+    margin-top: -100px;
+    margin-right: 100px;
+}
+
+.search {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    padding: 10px;
+    transition-duration: 500ms;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lato' sans-serif;
+    font-family: 'Noto Sans' sans-serif;
+    font-size: 15px;
+    border: 1px solid black;
+    overflow: hidden;
+    background-image: url(icons/search-black.svg);
+    background-size: 22px;
+    background-position: 45% 50%;
+
+}
+
+.search:hover {
+    border: 1px solid black;
+}
+
+.search:focus {
+    width: 200px;
+    cursor: text;
+    padding-left: 40px;
+    color: black;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid black;
+    background-image: url(icons/search-black.svg) no-repeat;
+    background-size: 22px;
+    background-position: 10px 50%;
+
+
+}
+
+.search1 {
+    margin-right: 1050px;
+    margin-left: 850px;
+}
+
+.search2 {
+    margin-left: 290px;
+}
+
+.text {
+    text-align: center;
+    margin-top: -120px;
+}
+
+.text2 {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.photo4 {
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+.photo3 {
+    margin-left: 50px;
+
+
+}
+
+.photo2 {
+    margin-left: 200px;
+    margin-top: -319px;
+}
+
+.photo1 {
+    margin-left: 380px;
+    margin-top: -270px;
+}
+
+img:not(first-child):hover {
+    transform: scale(1.1);
+}
+
+ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li a {
+    position: relative;
+    font-size: 3em;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+
+}
+
+ul li a::before {
+    content: attr(data-text);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 8px solid var(--clr);
+    -webkit-text-stroke: 1px var(--clr);
+}
+
+ul li a:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+}
+
+.text3 {
+    margin-left: 600px;
+
+}
+
+.baba {
+    margin-top: -350px;
+}
+
+.text4 {
+    text-align: center;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+
+}
+
+.main .navigation {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+
+}
+
+.main .navigation span {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #181818;
+    transform: translate(calc(14px* var(--x)), calc(14px*var(--y)));
+    transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    --color: #2d3030;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.button::before,
+.button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+}
+
+.button::before {
+    top: -1em;
+    left: -1em;
+}
+
+.button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.button:hover::before,
+.button:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.button:hover {
+    color: rgb(0, 0, 0);
+}
+
+.button:active {
+    filter: brightness(.8);
+}
+
+
+.h2 {
+    text-align: center;
+
+}
+
+/* .card:hover:before {
+    background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+    animation: rotBGimg 3.5s linear infinite;
+}
+
+*/
+.butoni {
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.button {
+    margin-left: 70px;
+}
+
+:root {
+    --primary: #665dfc;
+    --white: #FFFFFF;
+    --greylight-1: #
+}
+
+.second-page {
+    margin-top: 80px;
+    background-color: #b9bbbb;
+    font-size: 2em;
+}
+
+.second-svg {}
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Exo', sans-serif;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top: 50vh;
+
+}
+
+.context h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    margin-top: -190px;
+}
+
+
+.area {
+    background: #2d3030;
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    margin: 20px auto;
+    transform: translate(-50%, -55%);
+    background: rgba(0, 0, 0, .9);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+}
+
+.login-box p:first-child {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: #fff;
+    font-size: 12px;
+}
+
+.login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 3px
+}
+
+.login-box a:hover {
+    background: #fff;
+    color: #272727;
+    border-radius: 5px;
+}
+
+.login-box a span {
+    position: absolute;
+    display: block;
+}
+
+.login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fff);
+    animation: btn-anim1 1.5s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #fff);
+    animation: btn-anim2 1.5s linear infinite;
+    animation-delay: .375s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #fff);
+    animation: btn-anim3 1.5s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #fff);
+    animation: btn-anim4 1.5s linear infinite;
+    animation-delay: 1.125s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+.login-box p:last-child {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.login-box a.a2 {
+    color: #fff;
+    text-decoration: none;
+}
+
+.login-box a.a2:hover {
+    background: transparent;
+    color: #aaa;
+    border-radius: 5px;
+}
+
+.iphone {
+    margin-left: 850px;
+}
+
+.p {
+    transform: rotate(45deg);
+
+    transform-origin: left;
+
+    margin-left: 70px;
+
+    font-weight: bolder;
+
+    font-size: x-large;
+}
+
+.area1 {
+    background: #2d30307a;
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+.third-page {
+    background-color: #6c6d6d;
+    width: 100%;
+    height: 100%;
+}
+
+.costumise {
+    margin-top: -200px;
+    margin-bottom: 200px;
+}
+
+.card4 {
+    width: 190px;
+    height: 254px;
+    border-radius: 30px;
+    background: lightgrey;
+    margin-left: 30px;
+    margin-top: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 490px;
+    height: 354px;
+    perspective: 1000px;
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgb(39, 39, 39);
+    border-radius: 1rem;
+}
+
+.flip-card-front {
+    background: linear-gradient(120deg, #A7A6A6, rgb(189, 189, 189) 88%,
+            rgb(255, 211, 195) 40%, rgba(173, 169, 168, 0.603) 48%);
+    color: rgb(255, 255, 255);
+}
+
+.flip-card-back {
+    background: linear-gradient(120deg, #A7A6A6 30%, rgb(189, 189, 189) 88%,
+            bisque 40%, rgba(173, 169, 168, 0.603) 78%);
+    color: white;
+    transform: rotateY(180deg);
+}
